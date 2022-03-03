@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "text1">công ty cổ phần rikkeisoft</p>
+    <p id = "newtext1"></p>
+    <script>
+    var text1 = document.getElementById("text1").innerHTML;
+    newtext1(text1);
+    function newtext1(string) {
+        text1 = string.toLowerCase().split(" ");
+            for(var i = 0; i< text1.length; i++){
+                text1[i] = text1[i][0].toUpperCase() + text1[i].slice(1);
+            }
+        var b = text1.join(" ");
+        document.getElementById("newtext1").innerHTML = b;
+    }
+    </script>
+</body>
+</html>
